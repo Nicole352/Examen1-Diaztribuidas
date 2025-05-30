@@ -1,5 +1,6 @@
 **EXAMEN PRIMER PARCIAL**
 
+![image](https://github.com/user-attachments/assets/7121b401-9479-4e70-8846-e1ff6b341e81)
 
 
 ![image](https://github.com/user-attachments/assets/2f6e6398-e987-46f7-ae1a-f5cc36c0096f)
