@@ -1,3 +1,7 @@
+**EXAMEN PRIMER PARCIAL**
+
+
+
 ![image](https://github.com/user-attachments/assets/2f6e6398-e987-46f7-ae1a-f5cc36c0096f)
 
 
