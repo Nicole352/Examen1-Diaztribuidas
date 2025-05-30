@@ -1,0 +1,68 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: nicolediaz
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: pacientes
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: pacientes
+
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  iamRoleStatements:
+    - Effect: Allow
+      Action: 
+        - dynamodb:*
+      Resource:
+        - arn:aws:dynamodb:us-east-1:583686634945:table/pacientes
+
+functions:
+  hello:
+    handler: src/handler.hello
+    events:
+      - httpApi:
+          path: /
+          method: get
+  agregarPaciente: 
+    handler: src/agregarPaciente.agregarPaciente 
+    events:
+      - httpApi:
+          path: /agregar 
+          method: post 
+  obtenerPacientes:
+    handler: src/obtenerPacientes.obtenerPacientes
+    events:
+      - httpApi:
+          path: /pacientes
+          method: get
+  obtenerPaciente:
+    handler: src/obtenerPaciente.obtenerPaciente
+    events:
+      - httpApi:
+          path: /paciente/{id}
+          method: get
+  eliminarPaciente:
+    handler: src/eliminarPaciente.eliminarPaciente
+    events:
+      - httpApi:
+          path: /eliminar/{id}
+          method: delete
+  editarPaciente:
+    handler: src/editarPaciente.editarPaciente
+    events:
+      - httpApi:
+          path: /editar/{id}
+          method: put
+resources: 
+  Resources:
+    pacientes:
+      Type: AWS::DynamoDB::Table
+      Properties:
+        TableName: pacientes
+        BillingMode: PAY_PER_REQUEST
+        AttributeDefinitions:
+          - AttributeName: id
+            AttributeType: S
+        KeySchema:
+          - AttributeName: id
+            KeyType: HASH
