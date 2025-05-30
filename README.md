@@ -1,4 +1,29 @@
-**EXAMEN PRIMER PARCIAL**
+📄 Examen Primer Parcial - Sistemas Distribuidos
+Este proyecto es una práctica desarrollada como parte del primer examen parcial de la materia Sistemas Distribuidos. Su objetivo principal es implementar un servicio Serverless utilizando AWS Lambda, API Gateway y el Serverless Framework, todo con Node.js.
+
+El sistema simula una API RESTful para gestionar información de pacientes. Aunque actualmente no se utiliza una base de datos para persistencia, la lógica está preparada para simular operaciones como creación, consulta, modificación y eliminación de datos de pacientes.
+
+🚀 Funcionalidades principales
+📥 Crear pacientes
+
+🔍 Consultar pacientes
+
+✏️ Actualizar información de pacientes
+
+🗑️ Eliminar pacientes
+
+⚙️ Tecnologías utilizadas
+Node.js
+
+Serverless Framework
+
+AWS Lambda
+
+AWS API Gateway
+
+JavaScript
+
+
 
 ![image](https://github.com/user-attachments/assets/7121b401-9479-4e70-8846-e1ff6b341e81)
 
